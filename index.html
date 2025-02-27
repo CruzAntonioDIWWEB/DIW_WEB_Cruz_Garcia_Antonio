@@ -1,0 +1,281 @@
+<!--Página de Inicio de la Floristería Zacarías-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <!--Enlace con la hoja de estilos compilada de SASS-->
+    <link rel="stylesheet" href="./estilos_sass/main.scss">
+</head>
+
+<body>
+    <!--Cabecera de la página con el logotipo y el menú de navegación-->
+    <header class="cabecera">
+        <section class="menu_cabecera">
+            <a href="index.html" class="logotipo">
+                <picture>
+                    <!--Imagen del logotipo para pantallas pequeñas y grandes-->
+                    <source srcset="img/logotipo_397X380.webp" type="image/webp" media=" (min-width: 1px )">
+                    <img src="img/logotipo_400x385.jpg" alt="Logotipo">
+                </picture>
+            </a>
+            <nav>
+                <!--Menú de navegación con enlaces a las secciones de la página-->
+                <ul class="menu_navegacion">
+                    <li><a href="ramos.html">Ramos</a></li>
+                    <li><a href="flores_sueltas.html">Flores Sueltas</a></li>
+                    <li><a href="coronas.html">Coronas</a></li>
+                    <li><a href="celebraciones.html">Celebraciones</a></li>
+                    <li><a href="condolencias.html">Condolencias</a></li>
+                    <li><a href="#">Cesta</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <!--Sección principal de la página con el contenido principal-->
+    <main>
+        <!--Sección con la imagen héroe y el título principal-->
+        <section class="seccion_heroe">
+            <article class="texto_heroe">
+                <h1>FLORISTERÍA ZACARÍAS</h1>
+                <h3>Tu Floristería en Granada</h3>
+            </article>
+        </section>
+        <!--Sección con los productos destacados del momento-->
+        <section class="productos_destacados">
+            <h2>PRODUCTOS DESTACADOS</h2>
+            <section class="productos_principales">
+                <!--Tarjetas de productos, cada una contiene una imagen de un producto-->
+                <article class="tarjeta_producto">
+                    <a href="#">
+                        <!--Imagenes responsivas que se cargan dependiendo del tamaño de la pantalla-->
+                        <picture>
+                            <!--Imagenes en formato WEBP-->
+                            <source srcset="img/decoracion_mesa_2_2560x3840.webp" type="image/webp"
+                                media="(min-width: 2560px)">
+                            <source srcset="img/decoracion_mesa_2_1920x2880.webp" type="image/webp"
+                                media="(min-width: 1920px)">
+                            <source srcset="img/decoracion_mesa_2_1200x1800.webp" type="image/webp"
+                                media="(min-width: 1200px)">
+                            <source srcset="img/decoracion_mesa_2_768x1152.webp" type="image/webp"
+                                media="(min-width: 768px)">
+                            <source srcset="img/decoracion_mesa_2_480x720.webp" type="image/webp"
+                                media="(min-width: 480px)">
+                            <source srcset="img/decoracion_mesa_2_405x608.webp" type="image/webp"
+                                media="(max-width: 479px)">
+                            <!--Imagenes en formato JPG-->
+                            <source srcset="img/decoracion_mesa_2_2560x3840.jpg" type="image/jpeg"
+                                media="(min-width: 2560px)">
+                            <source srcset="img/decoracion_mesa_2_1920x2880.jpg" type="image/jpeg"
+                                media="(min-width: 1920px)">
+                            <source srcset="img/decoracion_mesa_2_1200x1800.jpg" type="image/jpeg"
+                                media="(min-width: 1200px)">
+                            <source srcset="img/decoracion_mesa_2_768x1152.jpg" type="image/jpeg"
+                                media="(min-width: 768px)">
+                            <source srcset="img/decoracion_mesa_2_480x720.jpg" type="image/jpeg"
+                                media="(min-width: 480px)">
+                            <source srcset="img/decoracion_mesa_2_405x608.jpg" type="image/jpeg"
+                                media="(max-width: 479px)">
+                            <!--Imagen de respaldo-->
+                            <img src="img/decoracion_mesa_2_405x608.jpg" alt="Destacado_1">
+                        </picture>
+                    </a>
+                </article>
+
+                <article class="tarjeta_producto">
+                    <a href="#">
+                        <picture>
+                            <!--Imagenes en formato WEBP-->
+                            <source srcset="img/ramo_funerario_9_2560x3833.webp" type="image/webp"
+                                media="(min-width: 2560px)">
+                            <source srcset="img/ramo_funerario_9_1920x2875.webp" type="image/webp"
+                                media="(min-width: 1920px)">
+                            <source srcset="img/ramo_funerario_9_1200x1797.webp" type="image/webp"
+                                media="(min-width: 1200px)">
+                            <source srcset="img/ramo_funerario_9_768x1150.webp" type="image/webp"
+                                media="(min-width: 768px)">
+                            <source srcset="img/ramo_funerario_9_480x719.webp" type="image/webp"
+                                media="(min-width: 480px)">
+                            <source srcset="img/ramo_funerario_9_405x606.webp" type="image/webp"
+                                media="(max-width: 479px)">
+                            <!--Imagenes en formato JPG-->
+                            <source srcset="img/ramo_funerario_9_2560x3833.jpg" type="image/jpeg"
+                                media="(min-width: 2560px)">
+                            <source srcset="img/ramo_funerario_9_1920x2875.jpg" type="image/jpeg"
+                                media="(min-width: 1920px)">
+                            <source srcset="img/ramo_funerario_9_1200x1797.jpg" type="image/jpeg"
+                                media="(min-width: 1200px)">
+                            <source srcset="img/ramo_funerario_9_768x1150.jpg" type="image/jpeg"
+                                media="(min-width: 768px)">
+                            <source srcset="img/ramo_funerario_9_480x719.jpg" type="image/jpeg"
+                                media="(min-width: 480px)">
+                            <source srcset="img/ramo_funerario_9_405x606.jpg" type="image/jpeg"
+                                media="(max-width: 479px)">
+                            <!--Imagen de respaldo-->
+                            <img src="img/ramo_funerario_9_405x606.jpg" alt="Destacado_2">
+                        </picture>
+                    </a>
+                </article>
+
+                <article class="tarjeta_producto">
+                    <a href="#">
+                        <picture>
+                            <!--Imagenes en formato WEBP-->
+                            <source srcset="img/ramo_rosas_especiales_3_2560x3840.webp" type="image/webp"
+                                media="(min-width: 2560px)">
+                            <source srcset="img/ramo_rosas_especiales_3_1920x2880.webp" type="image/webp"
+                                media="(min-width: 1920px)">
+                            <source srcset="img/ramo_rosas_especiales_3_1200x1800.webp" type="image/webp"
+                                media="(min-width: 1200px)">
+                            <source srcset="img/ramo_rosas_especiales_3_768x1152.webp" type="image/webp"
+                                media="(min-width: 768px)">
+                            <source srcset="img/ramo_rosas_especiales_3_480x720.webp" type="image/webp"
+                                media="(min-width: 480px)">
+                            <source srcset="img/ramo_rosas_especiales_3_405x608.webp" type="image/webp"
+                                media="(max-width: 479px)">
+                            <!--Imagenes en formato JPG-->
+                            <source srcset="img/ramo_rosas_especiales_3_2560x3840.jpg" type="image/jpeg"
+                                media="(min-width: 2560px)">
+                            <source srcset="img/ramo_rosas_especiales_3_1920x2880.jpg" type="image/jpeg"
+                                media="(min-width: 1920px)">
+                            <source srcset="img/ramo_rosas_especiales_3_1200x1800.jpg" type="image/jpeg"
+                                media="(min-width: 1200px)">
+                            <source srcset="img/ramo_rosas_especiales_3_768x1152.jpg" type="image/jpeg"
+                                media="(min-width: 768px)">
+                            <source srcset="img/ramo_rosas_especiales_3_480x720.jpg" type="image/jpeg"
+                                media="(min-width: 480px)">
+                            <source srcset="img/ramo_rosas_especiales_3_405x608.jpg" type="image/jpeg"
+                                media="(max-width: 479px)">
+                            <!--Imagen de respaldo-->
+                            <img src="img/ramo_rosas_especiales_3_405x608.jpg" alt="Destacado_3">
+                        </picture>
+                    </a>
+                </article>
+            </section>
+        </section>
+        <!--Sección con un mensaje para el usuario acerca del catálogo de productos-->
+        <section class="nuestra_seleccion">
+            <h2>NUESTRA SELECCIÓN</h2>
+            <article>
+                <p>Descubre nuestros exclusivos ramos de flores diseñados para cada ocasión especial. Desde arreglos
+                    elegantes hasta combinaciones frescas y vibrantes, en nuestra floristería encontrarás el ramo
+                    perfecto
+                    para expresar tus sentimientos. Explora nuestra colección de ramos únicos, creados con todo nuestro
+                    cariño y dedicación.</p>
+                <!--Botón que redirigirá al usuario hacia la sección de ramos de flores-->
+                <button class="boton-catalogo"> PRUEBA NUESTRO CATÁLOGO </button>
+            </article>
+        </section>
+        <!--Sección con las novedades de la floristería-->
+        <section class="novedades">
+            <h2>NOVEDADES</h2>
+            <section class="productos_grid">
+                <article class="producto_novedad">
+                    <picture>
+                        <!--Imagenes en formato WEBP-->
+                        <source srcset="img/clavel_solo_1_2560x3837.webp" type="image/webp" media="(min-width: 2560px)">
+                        <source srcset="img/clavel_solo_1_1920x2878.webp" type="image/webp" media="(min-width: 1920px)">
+                        <source srcset="img/clavel_solo_1_1200x1799.webp" type="image/webp" media="(min-width: 1200px)">
+                        <source srcset="img/clavel_solo_1_768x1151.webp" type="image/webp" media="(min-width: 768px)">
+                        <source srcset="img/clavel_solo_1_480x719.webp" type="image/webp" media="(min-width: 480px)">
+                        <source srcset="img/clavel_solo_1_405x607.webp" type="image/webp" media="(max-width: 479px)">
+                        <!--Imagenes en formato JPG-->
+                        <source srcset="img/clavel_solo_1_2560x3837.jpg" type="image/jpeg" media="(min-width: 2560px)">
+                        <source srcset="img/clavel_solo_1_1920x2878.jpg" type="image/jpeg" media="(min-width: 1920px)">
+                        <source srcset="img/clavel_solo_1_1200x1799.jpg" type="image/jpeg" media="(min-width: 1200px)">
+                        <source srcset="img/clavel_solo_1_768x1151.jpg" type="image/jpeg" media="(min-width: 768px)">
+                        <source srcset="img/clavel_solo_1_480x719.jpg" type="image/jpeg" media="(min-width: 480px)">
+                        <source srcset="img/clavel_solo_1_405x607.jpg" type="image/jpeg" media="(max-width: 479px)">
+                        <!--Imagen de respaldo-->
+                        <img src="img/clavel_solo_1_405x607.jpg" alt="Clavel_novedad">
+                    </picture>
+                    <button class="boton-comprar"> COMPRAR </button>
+                    <span class="precio">5.99€</span>
+                </article>
+                <article class="producto_novedad">
+                    <picture>
+                        <!--Imagenes en formato WEBP-->
+                        <source srcset="img/ramo_boda_color_1_2560x3840.webp" type="image/webp"
+                            media="(min-width: 2560px)">
+                        <source srcset="img/ramo_boda_color_1_1920x2880.webp" type="image/webp"
+                            media="(min-width: 1920px)">
+                        <source srcset="img/ramo_boda_color_1_1200x1800.webp" type="image/webp"
+                            media="(min-width: 1200px)">
+                        <source srcset="img/ramo_boda_color_1_768x1152.webp" type="image/webp"
+                            media="(min-width: 768px)">
+                        <source srcset="img/ramo_boda_color_1_480x720.webp" type="image/webp"
+                            media="(min-width: 480px)">
+                        <source srcset="img/ramo_boda_color_1_405x608.webp" type="image/webp"
+                            media="(max-width: 479px)">
+                        <!--Imagenes en formato JPG-->
+                        <source srcset="img/ramo_boda_color_1_2560x3840.jpg" type="image/jpeg"
+                            media="(min-width: 2560px)">
+                        <source srcset="img/ramo_boda_color_1_1920x2880.jpg" type="image/jpeg"
+                            media="(min-width: 1920px)">
+                        <source srcset="img/ramo_boda_color_1_1200x1800.jpg" type="image/jpeg"
+                            media="(min-width: 1200px)">
+                        <source srcset="img/ramo_boda_color_1_768x1152.jpg" type="image/jpeg"
+                            media="(min-width: 768px)">
+                        <source srcset="img/ramo_boda_color_1_480x720.jpg" type="image/jpeg" media="(min-width: 480px)">
+                        <source srcset="img/ramo_boda_color_1_405x608.jpg" type="image/jpeg" media="(max-width: 479px)">
+                        <!--Imagen de respaldo-->
+                        <img src="img/ramo_boda_color_1_405x608.jpg" alt="Ramo_boda_novedad">
+                    </picture>
+                    <button class="boton-comprar"> COMPRAR </button>
+                    <span class="precio">29.99€</span>
+                </article>
+                <article class="producto_novedad">
+                    <picture>
+                        <!--Imagenes en formato WEBP-->
+                        <source srcset="img/margarita_sola_3_2560x3837.webp" type="image/webp"
+                            media="(min-width: 2560px)">
+                        <source srcset="img/margarita_sola_3_1920x2878.webp" type="image/webp"
+                            media="(min-width: 1920px)">
+                        <source srcset="img/margarita_sola_3_1200x1799.webp" type="image/webp"
+                            media="(min-width: 1200px)">
+                        <source srcset="img/margarita_sola_3_768x1151.webp" type="image/webp"
+                            media="(min-width: 768px)">
+                        <source srcset="img/margarita_sola_3_480x719.webp" type="image/webp" media="(min-width: 480px)">
+                        <source srcset="img/margarita_sola_3_405x607.webp" type="image/webp" media="(max-width: 479px)">
+                        <!--Imagenes en formato JPG-->
+                        <source srcset="img/margarita_sola_3_2560x3837.jpg" type="image/jpeg"
+                            media="(min-width: 2560px)">
+                        <source srcset="img/margarita_sola_3_1920x2878.jpg" type="image/jpeg"
+                            media="(min-width: 1920px)">
+                        <source srcset="img/margarita_sola_3_1200x1799.jpg" type="image/jpeg"
+                            media="(min-width: 1200px)">
+                        <source srcset="img/margarita_sola_3_768x1151.jpg" type="image/jpeg" media="(min-width: 768px)">
+                        <source srcset="img/margarita_sola_3_480x719.jpg" type="image/jpeg" media="(min-width: 480px)">
+                        <source srcset="img/margarita_sola_3_405x607.jpg" type="image/jpeg" media="(max-width: 479px)">
+                        <!--Imagen de respaldo-->
+                        <img src="img/margarita_sola_3_405x607.jpg" alt="Margarita_novedad">
+                    </picture>
+                    <button class="boton-comprar"> COMPRAR </button>
+                    <span class="precio">12.99€</span>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <!--Pie de página con el logotipo y enlaces a las políticas de la empresa, licencias y contacto-->
+    <footer class="pie_pagina">
+        <section class="menu_pie">
+            <picture class="logotipo">
+                <source srcset="img/logotipo_397X380.webp" type="image/webp">
+                <img src="img/logotipo_400x385.jpg" alt="Logotipo">
+            </picture>
+            <nav>
+                <ul class="menu_navegacion">
+                    <li><a href="#">Políticas de Privacidad</a></li>
+                    <li><a href="#">Licencias</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+//Reseteo de estilos para garantizar una base común en todos los navegadores y evitar problemas
+@use '../global/variables';
+
+//para todos los elementos de la página elimino los márgenes y rellenos por defecto
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6; //Espaciado entre líneas
+  font-family: map-get(variables.$tipografias, fuente-texto);
+}
+
+img {
+  max-width: 100%;
+  height: auto; //Para que las imágenes no desborden su contenedor
+}

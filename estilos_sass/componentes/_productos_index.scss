@@ -1,0 +1,133 @@
+//Estilos para la sección de productos destacados y novedades
+@use '../global/variables';
+@use '../global/mixins' as *;
+@use '../global/funciones' as f;
+
+//Estilos generales para los productos destacados y novedades
+.productos_destacados,
+.novedades {
+    padding: 2rem 1rem; //base para móvil
+    margin: 0 auto;
+    max-width: 90%; //ancho máximo para móvil
+
+    //Estilos para tabletas
+    @include puntoRuptura("tableta") {
+        padding: 3rem 2rem;
+        max-width: 720px;
+    }
+
+    //Estilos para pantallas más grandes
+    @include puntoRuptura("pantalla-peque") {
+        padding: 4rem 3rem;
+        max-width: 1140px;
+    }
+
+    @include puntoRuptura("pantalla-estandar") {
+        max-width: 1800px;
+    }
+
+    @include puntoRuptura("pantalla-grande") {
+        max-width: 2200px;
+    }
+
+    //Estilos para los encabezados de productos destacados y novedades
+    h2 {
+        font-family: f.tipografias("fuente-titulos");
+        text-align: center;
+        color: f.colores("color-primario");
+        margin-bottom: 2rem;
+        font-size: 1.6rem; //base para movil
+
+        //Diferentes tamaños de fuente para distintos tamaños de pantalla
+        @include puntoRuptura("tableta") {
+            font-size: 1.8rem;
+        }
+
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 2rem;
+        }
+
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+//Utilizo grid para posicionar los productos, se ajustan según el tamaño de la pantalla
+.productos_principales {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr; //Una sola columna para moviles
+
+
+    @include puntoRuptura("tableta") {
+        grid-template-columns: repeat(2, 1fr); //Dos columnas en tabletas
+        gap: 2rem;
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        grid-template-columns: repeat(3, 1fr); //Tres columnas en pantallas pequeñas
+        gap: 2.5rem;
+    }
+
+}
+
+//Estilos para las tarjetas de productos, incluyo efectos cuando se pasa el ratón por encima
+.tarjeta_producto {
+    picture {
+        display: block;
+        height: 90%; //reduce la altura de la imagen un poco
+        overflow: hidden;
+        border-radius: 10px;
+
+        @include estiloImagen; //utilizo un mixin para los estilos de las imágenes
+    }
+
+}
+
+//Estilos para los botones de compra y precios en las tarjetas de productos de la sección novedades
+.producto_novedad {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: f.colores("color-neutro-bl");
+
+    picture {
+        display: block;
+        height: 90%;
+
+        @include estiloImagen; //utilizo un mixin para los estilos de las imágenes
+    }
+
+    .boton-comprar {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        width: calc(100% - 7rem); //ancho del botón ajustado para dejar espacio al precio
+        padding: 0.75rem 1rem;
+        background-color: f.colores("color-boton");
+        color: f.colores("color-neutro-bl");
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        z-index: 2; //posiciono el botón sobre la imagen
+
+        &:hover {
+            background-color: f.oscurecer(f.colores("color-boton"));
+        }
+    }
+
+    .precio {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: f.colores("color-neutro-bl");
+        color: f.colores("color-primario");
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        font-family: f.tipografias("fuente-cta");
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 2; //posiciono el precio sobre la imagen
+    }
+}

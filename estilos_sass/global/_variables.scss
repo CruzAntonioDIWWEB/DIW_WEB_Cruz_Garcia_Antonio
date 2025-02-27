@@ -1,0 +1,29 @@
+//Importo la fuente Roboto desde googleFonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+//Definición de las diferentes tipografías
+$tipografias: (
+    fuente-titulos: 'Playfair Display, serif',
+    fuente-texto: 'Roboto, sans-serif',
+    fuente-cta: 'Poppins, sans-serif'
+);
+
+//Definición de los puntos de ruptura
+$breakpoints: (
+    movil: 480px,
+    tableta: 768px,
+    pantalla-peque: 1200px,
+    pantalla-estandar: 1920px,
+    pantalla-grande: 2560px
+);
+
+//Definición de los colores de la página
+$colores: (
+    color-menu: #afbb9b,
+    color-primario: #A3B18A,
+    color-secundario: #D9CAB3,
+    color-boton: #D95D39,
+    color-neutro-bl: #FFFFFF,
+    color-neutro-gr: #E5E5E5
+);
+

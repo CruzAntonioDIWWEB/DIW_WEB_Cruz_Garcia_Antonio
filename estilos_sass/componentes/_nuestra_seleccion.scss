@@ -1,0 +1,82 @@
+//Estilos para la sección intermedia "nuestra selección"
+@use '../global/variables';
+@use '../global/mixins' as *;
+@use '../global/funciones' as f;
+
+.nuestra_seleccion {
+    background-color: f.colores("color-secundario");
+    padding: 4rem 0;
+    border-radius: 50%; //Hago que la sección tenga forma ovalada
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-family: f.tipografias("fuente-titulos");
+        color: f.colores("color-primario");
+
+        //Incremento gradualmente el tamaño del texto según el tamaño de la pantalla
+        @include puntoRuptura("movil") {
+            font-size: 1.8rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            font-size: 2rem;
+        }
+
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 2.2rem;
+        }
+
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 2.5rem;
+        }
+
+        @include puntoRuptura("pantalla-grande") {
+            font-size: 2.8rem;
+        }
+    }
+
+    //Utilizo flexbox para centrar los elementos
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem; //Ajusto el espacio entre elmentos
+        min-height: 250px; //Altura mínima
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    p {
+        padding: 0 20px;
+        font-family: f.tipografias("fuente-texto");
+        text-align: center;
+
+        @include puntoRuptura("movil") {
+            font-size: 1rem;
+            max-width: 100%;
+        }
+
+        @include puntoRuptura("tableta") {
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 1.2rem;
+            max-width: 800px;
+        }
+
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 1.3rem;
+            max-width: 1000px;
+        }
+
+        @include puntoRuptura("pantalla-grande") {
+            font-size: 1.4rem;
+            max-width: 1200px;
+        }
+    }
+}

@@ -1,0 +1,173 @@
+// Importaciones necesarias
+@use '../global/variables';
+@use '../global/mixins' as *;
+@use '../global/funciones' as f;
+
+// _contacto.scss - Estilos para la sección de contacto
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    background-color: f.colores("color-neutro-bl");
+    
+    &_titulo, &_subtitulo {
+        font-family: f.tipografias("fuente-titulos");
+        color: f.colores("color-primario");
+        text-align: center;
+        position: relative;
+    }
+    
+    &_titulo {
+        font-size: 1.8rem;
+        
+        @include puntoRuptura("tableta") {
+            font-size: 2.2rem;
+        }
+    }
+    
+    &_subtitulo {
+        font-size: 1.5rem;
+        
+        @include puntoRuptura("tableta") {
+            font-size: 1.8rem;
+        }
+    }
+    
+    &_descripcion, &_texto {
+        font-family: f.tipografias("fuente-texto");
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+        line-height: 1.6;
+        
+        @include puntoRuptura("movil") {
+            padding: 0 1.5rem;
+        }
+    }
+    
+    &_mapa {
+        width: 100%;
+        max-width: 600px;
+        padding: 1rem;
+        background-color: f.colores("color-neutro-gr");
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+        .mapa-container {
+            width: 100%;
+            height: 200px;
+            
+            @include puntoRuptura("tableta") {
+                height: 300px;
+            }
+        }
+    }
+    
+    &_direccion {
+        font-family: f.tipografias("fuente-texto");
+        padding-left: 1rem;
+    }
+    
+    &_formulario {
+        width: 100%;
+        max-width: 600px;
+        padding: 1.5rem;
+        background-color: f.colores("color-neutro-gr");
+        border-radius: 4px;
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+            
+            input, textarea {
+                padding: 0.8rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-family: f.tipografias("fuente-texto");
+                
+                &:focus {
+                    outline: none;
+                    border-color: f.colores("color-primario");
+                }
+            }
+            
+            textarea {
+                min-height: 100px;
+                resize: vertical;
+            }
+            
+            .contenedor-checkbox {
+                display: flex;
+                align-items: center;
+                
+                input[type="checkbox"] {
+                    margin-right: 0.5rem;
+                }
+                
+                .checkbox-texto {
+                    font-family: f.tipografias("fuente-texto");
+                    font-size: 0.9rem;
+                }
+            }
+            
+            .boton-contacto {
+                background-color: f.colores("color-boton");
+                color: f.colores("color-neutro-bl");
+                padding: 0.8rem 1.5rem;
+                border: none;
+                border-radius: 4px;
+                font-family: f.tipografias("fuente-cta");
+                font-weight: bold;
+                cursor: pointer;
+                align-self: flex-start;
+                
+                &:hover {
+                    background-color: f.oscurecer(f.colores("color-boton"));
+                }
+            }
+        }
+    }
+    
+    &_redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        gap: 1.5rem;
+        
+        @include puntoRuptura("tableta") {
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .red_social {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+            
+            i {
+                font-size: 1.8rem;
+                color: f.colores("color-boton");
+            }
+            
+            span {
+                font-family: f.tipografias("fuente-texto");
+                
+                &.red_social_info {
+                    color: #666;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}

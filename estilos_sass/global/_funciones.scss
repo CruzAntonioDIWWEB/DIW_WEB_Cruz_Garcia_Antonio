@@ -1,0 +1,17 @@
+//Implementación de funciones para simplificación de codigo
+@use '../global/variables';
+
+//Función para obtener los colores
+@function colores($nombre_color){
+    @return map-get(variables.$colores, $nombre_color);
+}
+
+//Función para obtener las tipografías
+@function tipografias($nombre_tipografia){
+    @return map-get(variables.$tipografias, $nombre_tipografia);
+}
+
+//Función para oscurecer colores
+@function oscurecer($color){
+    @return darken($color, 5%);
+}

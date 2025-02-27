@@ -1,0 +1,234 @@
+@use '../global/variables';
+@use '../global/mixins' as *;
+@use '../global/funciones' as f;
+
+.introduccion_a_seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: f.colores("color-neutro-bl");
+
+    @include puntoRuptura("tableta") {
+        padding: 3rem 2rem;
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        padding: 4rem 3rem;
+    }
+
+    h1 {
+        font-family: f.tipografias("fuente-titulos");
+        text-align: center;
+        color: f.oscurecer(f.colores("color-primario"));
+        font-size: 2.5rem;
+        position: relative;
+        margin-bottom: 1rem;
+    }
+}
+
+.texto_introduccion {
+    background-color: f.colores("color-secundario");
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+
+    p {
+        font-family: f.tipografias("fuente-texto");
+        text-align: center;
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+.filtrado {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .boton-filtrar {
+        background-color: f.colores("color-boton");
+        color: f.colores("color-neutro-bl");
+        padding: 0.75rem 2.5rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+
+        &:hover {
+            background-color: f.oscurecer(f.colores("color-boton"));
+        }
+    }
+}
+
+.productos_grid {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 1rem;
+    background-color: f.colores("color-primario");
+    border-radius: 15px;
+
+    @include puntoRuptura("tableta") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.celebraciones{
+        background-color: f.colores("color-neutro-gr");
+    }
+}
+
+.contenedor_producto {
+    display: flex;
+    flex-direction: column;
+    background-color: f.colores("color-secundario");
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+
+    picture {
+        width: 100%;
+        height: 400px;
+        @include estiloImagen;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .detalles_producto {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; /* Asegura que los elementos se distribuyan de manera uniforme en el contenedor */
+    
+        h2 {
+            font-family: f.tipografias("fuente-titulos");
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        p {
+            font-family: f.tipografias("fuente-texto");
+            margin-bottom: 1rem;
+        }
+    
+        .precio {
+            background-color: f.colores("color-neutro-gr");
+            color: f.colores("color-boton");
+            padding: 0.5rem 0.75rem;
+            border-radius: 10px;
+            font-family: map-get(variables.$tipografias, fuente-cta);
+            font-size: 1.3rem;
+            font-weight: bold;
+            align-self: center;
+        }
+
+        &.celebraciones{
+            background-color: f.colores("color-primario");
+        }
+
+        &.condolencias{
+            background-color: f.colores("color-secundario");
+        }
+    }
+}
+
+.texto_secciones_especiales {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    background-color: f.colores("color-secundario");
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+
+    p {
+        justify-content: flex-end;
+        align-self: center;
+        flex:2;
+        font-family: f.tipografias("fuente-texto");
+        line-height: 1.6;
+    }
+
+    h1 {
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    &.condolencias{
+        background-color: f.colores("color-primario");
+        h1{
+            color: f.colores("color-secundario");
+        }
+    }
+}
+
+.productos_principales_especiales{
+        display: grid;
+        gap: 2rem;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 1rem;
+    
+        @include puntoRuptura("tableta") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        @include puntoRuptura("pantalla-peque") {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+}
+
+.texto_secciones_especiales_2_parrafo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: f.colores("color-secundario");
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+    
+    h1 {
+        order: 2; // Mueve el título a la derecha
+        text-align: right;
+        flex: 1; // Ocupa espacio proporcionalmente
+    }
+
+    p {
+        order: 1; // Mueve el texto a la izquierda
+        text-align: left;
+        flex: 2; // Ocupa más espacio que el título para un mejor diseño
+        font-family: f.tipografias("fuente-texto");
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    &.condolencias{
+        background-color: f.colores("color-primario");
+        h1{
+            color: f.colores("color-secundario");
+        }
+    }
+
+}

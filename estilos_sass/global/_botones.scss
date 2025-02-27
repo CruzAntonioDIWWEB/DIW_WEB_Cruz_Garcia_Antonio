@@ -1,0 +1,25 @@
+//Estilos de los botones
+@use '../global/variables';
+@use '../global/mixins' as *;
+@use '../global/funciones' as f;
+
+.boton {
+  &-catalogo { //Uso anidamiento para los estilos de los diferentes botones
+    background-color: f.colores("color-boton");
+    color: f.colores("color-neutro-bl");
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: f.oscurecer(f.colores("color-boton"));
+    }
+  }
+
+  //Utilizo extend para heredar los estilos para el botón de nuestra selección (index)
+  &-comprar {
+    @extend .boton-catalogo;
+    width: 100%; 
+  }
+}

@@ -1,0 +1,122 @@
+//Esitlos del pie de página incluye el logotipo y enlaces importantes
+@use '../global/variables';
+@use '../global/mixins' as *;
+@use '../global/funciones' as f;
+
+.pie_pagina {
+    background-color: f.colores("color-primario");
+    padding: 1rem 2rem; //Espacio de los elementos internos
+
+    //Estilo para el contenedor del pie de página utilizando flex
+    .menu_pie {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @include puntoRuptura("movil") {
+            flex-direction: column; //En resoluaciones de movil, el pie de página cambia a modo columna
+            gap: 1rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            flex-direction: row; //En resoluciones de tableta en adelante, el pie de página cambia a modo fila
+            padding: 0 2rem;
+        }
+
+        @include puntoRuptura("pantalla-peque") {
+            max-width: 1400px;
+        }
+
+        @include puntoRuptura("pantalla-estandar") {
+            max-width: 1800px;
+        }
+
+        @include puntoRuptura("pantalla-grande") {
+            max-width: 2200px;
+        }
+    }
+}
+
+.logotipo {
+    width: 50px;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @include puntoRuptura("movil") {
+        width: 40px;
+    }
+
+    @include puntoRuptura("tableta") {
+        width: 45px;
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        width: 55px;
+    }
+
+    @include puntoRuptura("pantalla-estandar") {
+        width: 60px;
+    }
+
+    @include puntoRuptura("pantalla-grande") {
+        width: 70px;
+    }
+}
+
+//Estilos para los enlaces del pie de página
+.menu_navegacion {
+    font-family: f.tipografias("fuente-titulos");
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+    li a {
+        color: f.colores("color-neutro-bl");
+        text-decoration: none;
+
+        &:hover {
+            color: f.colores("color-boton"); //cambio el color al pasar el ratón por encima
+        }
+
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 1rem;
+        }
+
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 1.1rem;
+        }
+
+        @include puntoRuptura("pantalla-grande") {
+            font-size: 1.2rem;
+        }
+    }
+
+    //Ajustes para que el pie de página en resoluciones de movil no colapse
+    @include puntoRuptura("movil") {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    @include puntoRuptura("tableta") {
+        gap: 2.5rem;
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        gap: 3rem;
+    }
+
+    @include puntoRuptura("pantalla-estandar") {
+        gap: 3.5rem;
+    }
+
+    @include puntoRuptura("pantalla-grande") {
+        gap: 4rem;
+    }
+}
