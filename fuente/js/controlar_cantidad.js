@@ -1,10 +1,9 @@
-//Script para controlar la cantidad de productos
+//Script para controlar la cantidad de productos que se añaden en la seccion de compra
 document.addEventListener('DOMContentLoaded', function() {
     const btnMenos = document.querySelector('.btn-menos');
     const btnMas = document.querySelector('.btn-mas');
     const inputCantidad = document.querySelector('.input-cantidad');
-    
-    //Valor mínimo 
+     
     const valorMinimo = 1;
     
     //Función para aumentar la cantidad
