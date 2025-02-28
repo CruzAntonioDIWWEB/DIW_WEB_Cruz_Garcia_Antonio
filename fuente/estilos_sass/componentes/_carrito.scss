@@ -1,0 +1,241 @@
+/* Estilos para la sección de cesta de compra */
+@use '../global/variables';
+@use '../global/mixins' as *;
+@use '../global/funciones' as f;
+
+.cesta {
+    width: 100%;
+    padding: 2rem 1rem;
+
+    @include puntoRuptura("tableta") {
+        padding: 2rem 3rem;
+    }
+
+    &-titulo {
+        font-family: f.tipografias("fuente-titulos");
+        color: f.colores("color-primario");
+        font-size: 1.8rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid f.colores("color-secundario");
+
+        @include puntoRuptura("tableta") {
+            font-size: 2.2rem;
+        }
+    }
+
+    &-icono {
+        margin-left: 0.5rem;
+    }
+
+    &-contenido {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-tabla {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    &-tabla-cabecera {
+        background-color: f.colores("color-neutro-gr");
+    }
+
+    &-columna {
+        padding: 1rem;
+        text-align: left;
+        font-family: f.tipografias("fuente-texto");
+        font-weight: 700;
+    }
+
+    &-item {
+        border-bottom: 1px solid f.colores("color-neutro-gr");
+        background-color: f.colores("color-secundario");
+    }
+
+    &-foto {
+        width: 100px;
+        padding: 0.5rem;
+
+        @include puntoRuptura("tableta") {
+            width: 120px;
+        }
+    }
+
+    &-imagen {
+        width: 100%;
+        height: auto;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    &-descripcion {
+        padding: 1rem;
+    }
+
+    &-nombre-producto {
+        font-family: f.tipografias("fuente-titulos");
+        color: darken(f.colores("color-primario"), 15%);
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+
+        @include puntoRuptura("tableta") {
+            font-size: 1.4rem;
+        }
+    }
+
+    &-detalle {
+        font-family: f.tipografias("fuente-texto");
+        font-size: 0.9rem;
+        color: #333;
+
+        @include puntoRuptura("tableta") {
+            font-size: 1rem;
+        }
+    }
+
+    &-cantidad {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &-precio {
+        padding: 1rem;
+        text-align: right;
+        font-family: f.tipografias("fuente-texto");
+        font-weight: 700;
+    }
+
+    &-resumen {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 0;
+    }
+
+    &-total {
+        background-color: f.colores("color-neutro-gr");
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-family: f.tipografias("fuente-texto");
+        font-weight: 700;
+
+        @include puntoRuptura("tableta") {
+            width: 30%;
+        }
+    }
+
+    &-precio-total {
+        text-align: right;
+    }
+
+    &-acciones {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        @include puntoRuptura("tableta") {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+}
+
+// Selector de cantidad
+.selector-cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-cantidad {
+        background-color: f.colores("color-primario");
+        color: f.colores("color-neutro-bl");
+        border: none;
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: f.oscurecer(f.colores("color-primario"));
+        }
+    }
+
+    .input-cantidad {
+        width: 40px;
+        height: 30px;
+        text-align: center;
+        border: 1px solid f.colores("color-primario");
+        font-family: f.tipografias("fuente-texto");
+    }
+}
+
+// Botones de compra
+.boton-comprar {
+    background-color: f.colores("color-boton");
+    color: f.colores("color-neutro-bl");
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-family: f.tipografias("fuente-cta");
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%;
+
+    @include puntoRuptura("tableta") {
+        width: 40%;
+    }
+
+    &:hover {
+        background-color: f.oscurecer(f.colores("color-boton"));
+    }
+}
+
+.boton-cancelar {
+    background-color: f.colores("color-neutro-gr");
+    color: #666666;
+    padding: 0.5rem 1rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-family: f.tipografias("fuente-cta");
+    font-weight: 400;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: none;
+    width: auto;
+    margin-top: 0.5rem;
+    align-self: flex-end;
+
+    @include puntoRuptura("tableta") {
+        width: auto;
+        margin-top: 0.5rem;
+        align-self: flex-end;
+    }
+
+    &:hover {
+        background-color: darken(f.colores("color-neutro-gr"), 5%);
+    }
+}

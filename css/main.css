@@ -968,7 +968,6 @@ img {
   font-size: 0.9rem;
 }/*# sourceMappingURL=main.css.map */
 
-/* Estilos para la sección de compra*/
 .contenedor-compra {
   display: flex;
   justify-content: center;
@@ -1118,4 +1117,257 @@ img {
   text-align: center;
   font-size: 0.9rem;
   color: #666;
+}
+
+.cesta {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .cesta {
+    padding: 2rem 3rem;
+  }
+}
+
+.cesta-titulo {
+  font-family: 'Playfair Display, serif';
+  color: #A3B18A;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #D9CAB3;
+}
+
+@media (min-width: 768px) {
+  .cesta-titulo {
+    font-size: 2.2rem;
+  }
+}
+
+.cesta-icono {
+  margin-left: 0.5rem;
+}
+
+.cesta-contenido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cesta-tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cesta-tabla-cabecera {
+  background-color: #E5E5E5;
+}
+
+.cesta-columna {
+  padding: 1rem;
+  text-align: left;
+  font-family: 'Roboto, sans-serif';
+  font-weight: 700;
+}
+
+.cesta-item {
+  border-bottom: 1px solid #E5E5E5;
+  background-color: #D9CAB3;
+}
+
+.cesta-foto {
+  width: 100px;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .cesta-foto {
+    width: 120px;
+  }
+}
+
+.cesta-imagen {
+  width: 100%;
+  height: auto;
+}
+
+.cesta-imagen img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.cesta-imagen img:hover {
+  transform: scale(1.02);
+}
+
+.cesta-descripcion {
+  padding: 1rem;
+}
+
+.cesta-nombre-producto {
+  font-family: 'Playfair Display, serif';
+  color: #778465;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .cesta-nombre-producto {
+    font-size: 1.4rem;
+  }
+}
+
+.cesta-detalle {
+  font-family: 'Roboto, sans-serif';
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .cesta-detalle {
+    font-size: 1rem;
+  }
+}
+
+.cesta-cantidad {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cesta-precio {
+  padding: 1rem;
+  text-align: right;
+  font-family: 'Roboto, sans-serif';
+  font-weight: 700;
+}
+
+.cesta-resumen {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+.cesta-total {
+  background-color: #E5E5E5;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Roboto, sans-serif';
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .cesta-total {
+    width: 30%;
+  }
+}
+
+.cesta-precio-total {
+  text-align: right;
+}
+
+.cesta-acciones {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cesta-acciones {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.selector-cantidad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selector-cantidad .btn-cantidad {
+  background-color: #A3B18A;
+  color: #FFFFFF;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selector-cantidad .btn-cantidad:hover {
+  background-color: #97a57e;
+}
+
+.selector-cantidad .input-cantidad {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #A3B18A;
+  font-family: 'Roboto, sans-serif';
+}
+
+.boton-comprar {
+  background-color: #D95D39;
+  color: #FFFFFF;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Poppins, sans-serif';
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .boton-comprar {
+    width: 40%;
+  }
+}
+
+.boton-comprar:hover {
+  background-color: #ce5834;
+}
+
+.boton-cancelar {
+  background-color: #E5E5E5;
+  color: #666666;
+  padding: 0.5rem 1rem;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-family: 'Poppins, sans-serif';
+  font-weight: 400;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: none;
+  width: auto;
+  margin-top: 0.5rem;
+  align-self: flex-end;
+}
+
+@media (min-width: 768px) {
+  .boton-cancelar {
+    width: auto;
+    margin-top: 0.5rem;
+    align-self: flex-end;
+  }
+}
+
+.boton-cancelar:hover {
+  background-color: #D9D9D9;
 }

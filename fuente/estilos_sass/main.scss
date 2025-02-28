@@ -1,14 +1,21 @@
 //Importación de los archivos SASS
-@use './base/reset'; //Reseteo de estilos para evitar conflictos de estilo con el navegador
-@use './componentes/cabecera'; //Estilos para el encabezado de la página
-@use './global/mixins'; //Mixins reutilizables
-@use './global/variables'; //Variables globales
-@use './componentes/seccion_heroe'; //Estilos para la sección héroe
-@use './componentes/productos_index'; //Estilos para los productos
-@use './componentes/nuestra_seleccion'; //Estilos para la sección "nuestra selección"
-@use './componentes/pieDePagina'; //Estilos para el pie de página
-@use './global/botones'; //Estilos para botones en toda la página
-@use './componentes/catalogo_floristeria'; //Estilos para la sección "flores sueltas"
-@use './global/funciones'; //Funciones para simplificar el código
-@use './componentes/contacto'; //Estilos para la sección de contacto
-@use './componentes/seccion_compra'; //Estilos para la sección de compra
+
+//Global
+@use './global/variables'; // Variables globales
+@use './global/mixins'; // Mixins reutilizables
+@use './global/funciones'; // Funciones para simplificar el código
+@use './global/botones'; // Estilos para botones en toda la página
+
+//Base
+@use './base/reset'; // Reseteo de estilos para evitar conflictos de estilo con el navegador
+
+//Componentes
+@use './componentes/cabecera'; // Estilos para el encabezado de la página
+@use './componentes/seccion_heroe'; // Estilos para la sección héroe
+@use './componentes/productos_index'; // Estilos para los productos
+@use './componentes/nuestra_seleccion'; // Estilos para la sección "nuestra selección"
+@use './componentes/pieDePagina'; // Estilos para el pie de página
+@use './componentes/catalogo_floristeria'; // Estilos para la sección "flores sueltas"
+@use './componentes/contacto'; // Estilos para la sección de contacto
+@use './componentes/seccion_compra'; // Estilos para la sección de compra
+@use './componentes/carrito'; // Estilos para la sección de cesta de compra
