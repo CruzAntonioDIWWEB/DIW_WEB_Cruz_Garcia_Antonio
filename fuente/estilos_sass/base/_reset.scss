@@ -1,5 +1,7 @@
 //Reseteo de estilos para garantizar una base común en todos los navegadores y evitar problemas
 @use '../global/variables';
+@use '../global/funciones' as f;
+@use 'sass:map';
 
 //para todos los elementos de la página elimino los márgenes y rellenos por defecto
 *,
@@ -12,7 +14,7 @@
 
 body {
   line-height: 1.6; //Espaciado entre líneas
-  font-family: map-get(variables.$tipografias, fuente-texto);
+  font-family: f.tipografias("fuente-texto");
 }
 
 img {

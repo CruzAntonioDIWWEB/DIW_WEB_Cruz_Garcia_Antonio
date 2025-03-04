@@ -1,6 +1,7 @@
 @use '../global/variables';
 @use '../global/mixins' as *;
 @use '../global/funciones' as f;
+@use 'sass:map';
 
 .introduccion_a_seccion {
     display: flex;
@@ -130,7 +131,7 @@
             color: f.colores("color-boton");
             padding: 0.5rem 0.75rem;
             border-radius: 10px;
-            font-family: map-get(variables.$tipografias, fuente-cta);
+            font-family: f.tipografias("fuente-cta");
             font-size: 1.3rem;
             font-weight: bold;
             align-self: center;

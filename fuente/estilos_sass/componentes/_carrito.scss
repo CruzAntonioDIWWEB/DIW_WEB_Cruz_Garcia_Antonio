@@ -88,7 +88,7 @@
 
     &-nombre-producto {
         font-family: f.tipografias("fuente-titulos");
-        color: darken(f.colores("color-primario"), 15%);
+        color: oscurecer(f.colores("color-primario"));
         margin-bottom: 0.5rem;
         font-size: 1.2rem;
 
@@ -236,6 +236,6 @@
     }
 
     &:hover {
-        background-color: darken(f.colores("color-neutro-gr"), 5%);
+        background-color: oscurecer(f.colores("color-neutro-gr"));
     }
 }
