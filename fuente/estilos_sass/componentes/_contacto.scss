@@ -159,8 +159,9 @@
                 color: f.colores("color-boton");
             }
             
-            span {
+            p {
                 font-family: f.tipografias("fuente-texto");
+                margin: 0;
                 
                 &.red_social_info {
                     color: #666;
