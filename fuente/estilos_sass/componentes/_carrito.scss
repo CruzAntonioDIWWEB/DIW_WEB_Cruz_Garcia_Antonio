@@ -5,7 +5,11 @@
 
 .cesta {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 0.5rem; 
+    
+    @include puntoRuptura("movil") {
+        padding: 1rem;
+    }
 
     @include puntoRuptura("tableta") {
         padding: 2rem 3rem;
@@ -14,13 +18,17 @@
     &-titulo {
         font-family: f.tipografias("fuente-titulos");
         color: f.colores("color-primario");
-        font-size: 1.8rem;
+        font-size: 1.3rem; 
         font-weight: 700;
         display: flex;
         align-items: center;
-        padding-bottom: 1rem;
-        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
         border-bottom: 1px solid f.colores("color-secundario");
+
+        @include puntoRuptura("movil") {
+            font-size: 1.5rem;
+            padding-bottom: 1rem;
+        }
 
         @include puntoRuptura("tableta") {
             font-size: 2.2rem;
@@ -28,18 +36,25 @@
     }
 
     &-icono {
-        margin-left: 0.5rem;
+        padding-left: 0.5rem;
     }
 
     &-contenido {
         width: 100%;
         display: flex;
         flex-direction: column;
+        gap: 1rem; 
+    }
+    
+    &-tabla-contenedor {
+        width: 100%;
+        overflow-x: auto;
     }
 
     &-tabla {
         width: 100%;
         border-collapse: collapse;
+        min-width: 400px; 
     }
 
     &-tabla-cabecera {
@@ -47,10 +62,33 @@
     }
 
     &-columna {
-        padding: 1rem;
+        padding: 0.5rem; 
         text-align: left;
         font-family: f.tipografias("fuente-texto");
         font-weight: 700;
+        font-size: 0.8rem;
+
+        &:first-child {
+            width: 70px; 
+        }
+
+        &:nth-child(3) {
+            width: 80px; 
+        }
+
+        &:last-child {
+            width: 60px; 
+        }
+
+        @include puntoRuptura("movil") {
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            padding: 1rem;
+            font-size: 1rem;
+        }
     }
 
     &-item {
@@ -59,11 +97,16 @@
     }
 
     &-foto {
-        width: 100px;
-        padding: 0.5rem;
+        width: 60px;
+        padding: 0.25rem;
+
+        @include puntoRuptura("movil") {
+            width: 70px;
+        }
 
         @include puntoRuptura("tableta") {
             width: 120px;
+            padding: 0.5rem;
         }
     }
 
@@ -83,14 +126,27 @@
     }
 
     &-descripcion {
-        padding: 1rem;
+        padding: 0.25rem 0.5rem;
+
+        @include puntoRuptura("movil") {
+            padding: 0.5rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            padding: 1rem;
+        }
     }
 
     &-nombre-producto {
         font-family: f.tipografias("fuente-titulos");
-        color: oscurecer(f.colores("color-primario"));
-        margin-bottom: 0.5rem;
-        font-size: 1.2rem;
+        color: f.oscurecer(f.colores("color-primario"));
+        padding-bottom: 0.25rem; 
+        font-size: 0.9rem;
+
+        @include puntoRuptura("movil") {
+            font-size: 1rem;
+            padding-bottom: 0.5rem;
+        }
 
         @include puntoRuptura("tableta") {
             font-size: 1.4rem;
@@ -99,44 +155,85 @@
 
     &-detalle {
         font-family: f.tipografias("fuente-texto");
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         color: #333;
+        max-height: 2.25rem; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include puntoRuptura("movil") {
+            font-size: 0.8rem;
+            max-height: 2.4rem;
+        }
 
         @include puntoRuptura("tableta") {
             font-size: 1rem;
+            max-height: none;
+            overflow: visible;
         }
     }
 
     &-cantidad {
-        padding: 1rem;
+        padding: 0.25rem;
         text-align: center;
+
+        @include puntoRuptura("movil") {
+            padding: 0.5rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            padding: 1rem;
+        }
     }
 
     &-precio {
-        padding: 1rem;
+        padding: 0.25rem 0.5rem;
         text-align: right;
         font-family: f.tipografias("fuente-texto");
         font-weight: 700;
+        font-size: 0.8rem;
+
+        @include puntoRuptura("movil") {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            padding: 1rem;
+            font-size: 1rem;
+        }
     }
 
     &-resumen {
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
+
+        @include puntoRuptura("movil") {
+            padding: 1rem 0;
+        }
     }
 
     &-total {
         background-color: f.colores("color-neutro-gr");
-        padding: 1rem 2rem;
+        padding: 0.5rem 0.75rem;
         display: flex;
         justify-content: space-between;
         width: 100%;
         font-family: f.tipografias("fuente-texto");
         font-weight: 700;
+        font-size: 0.9rem;
+
+        @include puntoRuptura("movil") {
+            width: 60%;
+            padding: 0.75rem 1rem;
+        }
 
         @include puntoRuptura("tableta") {
             width: 30%;
+            padding: 1rem 2rem;
+            font-size: 1rem;
         }
     }
 
@@ -148,34 +245,51 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        gap: 1rem;
-        margin-top: 2rem;
+        align-items: center;
+        gap: 0.5rem; 
+
+        @include puntoRuptura("movil") {
+            gap: 0.75rem;
+        }
 
         @include puntoRuptura("tableta") {
             flex-direction: column;
             align-items: flex-end;
+            gap: 1rem;
         }
     }
 }
 
-// Selector de cantidad
+//Selector de cantidad
 .selector-cantidad {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2px; 
 
     .btn-cantidad {
         background-color: f.colores("color-primario");
         color: f.colores("color-neutro-bl");
         border: none;
-        width: 30px;
-        height: 30px;
-        font-size: 1.2rem;
+        width: 22px;
+        height: 22px;
+        font-size: 0.9rem;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include puntoRuptura("movil") {
+            width: 25px;
+            height: 25px;
+            font-size: 1rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            width: 30px;
+            height: 30px;
+            font-size: 1.2rem;
+        }
 
         &:hover {
             background-color: f.oscurecer(f.colores("color-primario"));
@@ -183,30 +297,51 @@
     }
 
     .input-cantidad {
-        width: 40px;
-        height: 30px;
+        width: 25px;
+        height: 22px;
         text-align: center;
         border: 1px solid f.colores("color-primario");
         font-family: f.tipografias("fuente-texto");
+        font-size: 0.8rem;
+
+        @include puntoRuptura("movil") {
+            width: 30px;
+            height: 25px;
+            font-size: 0.9rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            width: 40px;
+            height: 30px;
+            font-size: 1rem;
+        }
     }
 }
 
-// Botones de compra
+//Botones de compra
 .boton-comprar {
     background-color: f.colores("color-boton");
     color: f.colores("color-neutro-bl");
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
     font-family: f.tipografias("fuente-cta");
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     text-transform: uppercase;
     width: 100%;
 
+    @include puntoRuptura("movil") {
+        width: 80%;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
     @include puntoRuptura("tableta") {
         width: 40%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 
     &:hover {
@@ -217,25 +352,27 @@
 .boton-cancelar {
     background-color: f.colores("color-neutro-gr");
     color: #666666;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border: 1px solid #CCCCCC;
     border-radius: 4px;
     font-family: f.tipografias("fuente-cta");
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     cursor: pointer;
     text-transform: none;
     width: auto;
-    margin-top: 0.5rem;
-    align-self: flex-end;
+    align-self: center;
+
+    @include puntoRuptura("movil") {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
 
     @include puntoRuptura("tableta") {
-        width: auto;
-        margin-top: 0.5rem;
         align-self: flex-end;
     }
 
     &:hover {
-        background-color: oscurecer(f.colores("color-neutro-gr"));
+        background-color: f.oscurecer(f.colores("color-neutro-gr"));
     }
 }

@@ -33,56 +33,59 @@
             <h1 class="cesta-titulo">Su cesta <p class="cesta-icono">🛒</p></h1>
 
             <section class="cesta-contenido">
-                <table class="cesta-tabla">
-                    <thead class="cesta-tabla-cabecera">
-                        <tr>
-                            <th class="cesta-columna">Foto</th>
-                            <th class="cesta-columna">Descripción</th>
-                            <th class="cesta-columna">Cantidad</th>
-                            <th class="cesta-columna">Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="cesta-item">
-                            <td class="cesta-foto">
-                                <picture class="cesta-imagen">
-                                    <img src="../img/decoracion_mesa_2_405x608.webp" alt="Ramo de rosas blancas">
-                                </picture>
-                            </td>
-                            <td class="cesta-descripcion">
-                                <h3 class="cesta-nombre-producto">Corona de Mesa</h3>
-                                <p class="cesta-detalle">Exquisito arreglo floral para decorar mesas, compuesto por rosas, alstroemerias, paniculata y solidago amarillo.</p>
-                            </td>
-                            <td class="cesta-cantidad">
-                                <section class="selector-cantidad">
-                                    <button class="btn-cantidad btn-menos">-</button>
-                                    <input type="text" class="input-cantidad" value="1">
-                                    <button class="btn-cantidad btn-mas">+</button>
-                                </section>
-                            </td>
-                            <td class="cesta-precio">40.00 €</td>
-                        </tr>
-                        <tr class="cesta-item">
-                            <td class="cesta-foto">
-                                <picture class="cesta-imagen">
-                                    <img src="../img/decoracion_mesa_2_405x608.webp" alt="Ramo de rosas blancas pequeño">
-                                </picture>
-                            </td>
-                            <td class="cesta-descripcion">
-                                <h3 class="cesta-nombre-producto">Corona de Mesa</h3>
-                                <p class="cesta-detalle">Exquisito arreglo floral para decorar mesas, compuesto por rosas, alstroemerias, paniculata y solidago amarillo.</p>
-                            </td>
-                            <td class="cesta-cantidad">
-                                <section class="selector-cantidad">
-                                    <button class="btn-cantidad btn-menos">-</button>
-                                    <input type="text" class="input-cantidad" value="1">
-                                    <button class="btn-cantidad btn-mas">+</button>
-                                </section>
-                            </td>
-                            <td class="cesta-precio">40.00 €</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <!-- Contenedor con scroll horizontal para pantallas pequeñas -->
+                <div class="cesta-tabla-contenedor">
+                    <table class="cesta-tabla">
+                        <thead class="cesta-tabla-cabecera">
+                            <tr>
+                                <th class="cesta-columna">Foto</th>
+                                <th class="cesta-columna">Descripción</th>
+                                <th class="cesta-columna">Cantidad</th>
+                                <th class="cesta-columna">Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cesta-item">
+                                <td class="cesta-foto">
+                                    <picture class="cesta-imagen">
+                                        <img src="../img/decoracion_mesa_2_405x608.webp" alt="Ramo de rosas blancas">
+                                    </picture>
+                                </td>
+                                <td class="cesta-descripcion">
+                                    <h3 class="cesta-nombre-producto">Corona de Mesa</h3>
+                                    <p class="cesta-detalle">Exquisito arreglo floral para decorar mesas, compuesto por rosas, alstroemerias, paniculata y solidago amarillo.</p>
+                                </td>
+                                <td class="cesta-cantidad">
+                                    <section class="selector-cantidad">
+                                        <button class="btn-cantidad btn-menos">-</button>
+                                        <input type="text" class="input-cantidad" value="1">
+                                        <button class="btn-cantidad btn-mas">+</button>
+                                    </section>
+                                </td>
+                                <td class="cesta-precio">40.00 €</td>
+                            </tr>
+                            <tr class="cesta-item">
+                                <td class="cesta-foto">
+                                    <picture class="cesta-imagen">
+                                        <img src="../img/decoracion_mesa_2_405x608.webp" alt="Ramo de rosas blancas pequeño">
+                                    </picture>
+                                </td>
+                                <td class="cesta-descripcion">
+                                    <h3 class="cesta-nombre-producto">Corona de Mesa</h3>
+                                    <p class="cesta-detalle">Exquisito arreglo floral para decorar mesas, compuesto por rosas, alstroemerias, paniculata y solidago amarillo.</p>
+                                </td>
+                                <td class="cesta-cantidad">
+                                    <section class="selector-cantidad">
+                                        <button class="btn-cantidad btn-menos">-</button>
+                                        <input type="text" class="input-cantidad" value="1">
+                                        <button class="btn-cantidad btn-mas">+</button>
+                                    </section>
+                                </td>
+                                <td class="cesta-precio">40.00 €</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <section class="cesta-resumen">
                     <div class="cesta-total">
